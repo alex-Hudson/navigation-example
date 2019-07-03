@@ -35,6 +35,8 @@ const MyNavScreen = ({
         onPress={() => navigation.navigate('Settings')}
         title="Go to settings tab"
       />
+      <Button onPress={() => navigation.openDrawer()} title="Open drawer" />
+
       <Button onPress={() => navigation.goBack(null)} title="Go back" />
       {TEXT.split('\n').map((p, n) => (
         <Text key={n} style={{ marginVertical: 10, marginHorizontal: 8 }}>
