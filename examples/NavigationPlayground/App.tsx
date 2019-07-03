@@ -34,123 +34,13 @@ import SwitchWithStacks from './src/SwitchWithStacks';
 import TabsInDrawer from './src/TabsInDrawer';
 
 const ExampleInfo: any = {
-  CustomTabUI: {
-    description: 'Render additional views around a Tab navigator',
-    name: 'Custom Tabs UI',
-  },
-  CustomTabs: {
-    description: 'Custom tabs with tab router',
-    name: 'Custom Tabs',
-  },
-  CustomTransitioner: {
-    description: 'Custom transitioner with stack router',
-    name: 'Custom Transitioner',
-  },
-  Drawer: {
-    description: 'Android-style drawer navigation',
-    name: 'Drawer Example',
-  },
-  InactiveStack: {
-    description:
-      'An inactive route in a stack should be given the opportunity to handle actions',
-    name: 'Navigate idempotently to stacks in inactive routes',
-  },
-  KeyboardHandlingExample: {
-    description:
-      'Demo automatic handling of keyboard showing/hiding inside StackNavigator',
-    name: 'Keyboard Handling Example',
-  },
-  LinkStack: {
-    description: 'Deep linking into a route in stack',
-    name: 'Link in Stack',
-  },
-  LinkTabs: {
-    description: 'Deep linking into a route in tab',
-    name: 'Link to Settings Tab',
-  },
-  ModalStack: {
-    description:
-      Platform.OS === 'ios'
-        ? 'Stack navigation with modals'
-        : 'Dynamically showing and hiding the header',
-    name:
-      Platform.OS === 'ios'
-        ? 'Modal Stack Example'
-        : 'Stack with Dynamic Header',
-  },
-  SimpleStack: {
-    description: 'A card stack',
-    name: 'Stack Example',
-  },
-  SimpleTabs: {
-    description: 'Tabs following platform conventions',
-    name: 'Tabs Example',
-  },
-  StackWithCustomHeaderBackImage: {
-    description: 'Stack with custom header back image',
-    name: 'Custom header back image',
-  },
-  StackWithHeaderPreset: {
-    description: 'Masked back button and sliding header items. iOS only.',
-    name: 'UIKit-style Header Transitions',
-  },
-  StackWithTranslucentHeader: {
-    description: 'Render arbitrary translucent content in header background.',
-    name: 'Translucent Header',
-  },
-  StacksInTabs: {
-    description: 'Nested stack navigation in tabs',
-    name: 'Stacks in Tabs',
-  },
-  StacksOverTabs: {
-    description: 'Nested stack navigation that pushes on top of tabs',
-    name: 'Stacks over Tabs',
-  },
-  StacksOverTopTabs: {
-    description: 'Tab navigator in stack with custom header heights',
-    name: 'Stacks with non-standard header height',
-  },
-  StacksAndKeys: {
-    description: 'Use keys to link between screens',
-    name: 'Link in Stack with keys',
-  },
-  SwitchWithStacks: {
-    description: 'Jump between routes',
-    name: 'Switch between routes',
-  },
-  // MultipleDrawer: {
-  //   description: 'Add any drawer you need',
-  //   name: 'Multiple Drawer Example',
-  // },
   TabsInDrawer: {
     description: 'A drawer combined with tabs',
     name: 'Drawer + Tabs Example',
   },
-  TabsWithNavigationEvents: {
-    description:
-      'Declarative NavigationEvents component to subscribe to navigation events',
-    name: 'NavigationEvents',
-  },
-  TabsWithNavigationFocus: {
-    description: 'Receive the focus prop to know when a screen is focused',
-    name: 'withNavigationFocus',
-  },
 };
 
 const ExampleRoutes: any = {
-  CustomTabUI,
-  CustomTabs,
-  Drawer,
-  ModalStack,
-  SimpleStack,
-  SimpleTabs,
-  StackWithCustomHeaderBackImage,
-  StackWithTranslucentHeader,
-  StacksAndKeys,
-  StacksOverTabs,
-  SwitchWithStacks,
-  StacksOverTopTabs,
-  StacksInTabs,
   ...Platform.select({
     android: {},
     ios: {
@@ -158,14 +48,6 @@ const ExampleRoutes: any = {
     },
   }),
   TabsInDrawer,
-  LinkStack: {
-    screen: SimpleStack,
-    path: 'people/Jordan',
-  },
-  LinkTabs: {
-    screen: SimpleTabs,
-    path: 'settings',
-  },
 };
 
 interface State {
